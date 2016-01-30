@@ -48,7 +48,11 @@
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\DestroyBullet.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\MouseShoot.cs" />
+=======
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+>>>>>>> cbe414d2e04ac756c71a7af88bcd5bd95edd7c57
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/Tommy/Desktop/Unity Games/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
