@@ -3,8 +3,10 @@ using System.Collections;
 
 public class DestroyBullet : MonoBehaviour {
 
-	void Update () 
+	public float lifetime;
+
+	void Start ()
 	{
-		Destroy(this);
+		Destroy (gameObject, lifetime);
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-// And Shooting and shit
+    // And Shooting and shit
 	Rigidbody2D rigidbody;
 	Animator anim;
 	public float speed = 5.0f;
@@ -25,18 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update () {
 		Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-		/*
-		if (movementVector != Vector2.zero) 
-		{
-			anim.SetBool("isWalking", true);
-			anim.SetFloat("input_x", movementVector.x);
-			anim.SetFloat("input_y", movementVector.y);
-		}
-		else
-		{
-			anim.SetBool("isWalking", false);
-		}
-		*/
+
 		rigidbody.MovePosition(rigidbody.position + movementVector * speed * Time.deltaTime);
 
 		if (Input.GetKey("space"))
