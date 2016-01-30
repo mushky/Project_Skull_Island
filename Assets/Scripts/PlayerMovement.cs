@@ -18,6 +18,16 @@ public class PlayerMovement : MonoBehaviour {
 		Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 	}
 
+	void RotateLeft () 
+	{
+		transform.Rotate (Vector3.forward * 5);
+	}
+
+	void RotateRight () 
+	{
+		transform.Rotate (Vector3.forward * -5);
+	}
+
 	void Update() 
 	{
 		if (Input.GetKey("w"))
@@ -40,6 +50,16 @@ public class PlayerMovement : MonoBehaviour {
 			transform.position += Vector3.right * speed * Time.deltaTime;
 		}
 
+		if (Input.GetKey("q"))
+		{
+			RotateLeft();
+		}
+
+		if (Input.GetKey("e"))
+		{
+			RotateRight();
+		}
+			
 		if (Input.GetKey("space"))
 		{
 			Fire();
