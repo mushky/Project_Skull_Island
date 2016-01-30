@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletBehaviors : MonoBehaviour {
+public class MouseShoot : MonoBehaviour {
 
 	public GameObject bullet;
 	public float speed = 5.0f;
