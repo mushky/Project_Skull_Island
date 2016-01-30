@@ -5,8 +5,13 @@ public class MouseShoot : MonoBehaviour {
 
 	public GameObject bullet;
 	public float speed = 5.0f;
+	public bool pause = true;
+	Animator anim;
 
-	// Update is called once per frame
+	void Start () {
+		anim = GetComponent<Animator>();
+	}
+
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) 
 		{
@@ -19,6 +24,17 @@ public class MouseShoot : MonoBehaviour {
 			Quaternion rotation = Quaternion.Euler(0,0,Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90) ;
 			GameObject projectile = (GameObject) Instantiate(bullet,myPos, rotation);
 			projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
+			anim.Play("PlayerAttack");
+			StartCoroutine(Pause());
+			anim.Play("PlayerIdle");
+
 		}
+	}
+
+	public IEnumerator Pause()
+	{
+		pause = false;
+		yield return new WaitForSeconds(0.5f);
+		pause = true;
 	}
 }

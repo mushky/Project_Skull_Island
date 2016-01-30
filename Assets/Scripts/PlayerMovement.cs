@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
     // And Shooting and shit
 	Rigidbody2D rigidbody;
 	Animator anim;
-	public float speed = 5.0f;
+	public float speed = 3.5f;
 
 	void Start () {
 		rigidbody = GetComponent<Rigidbody2D>();
