@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{8E784C4C-72DC-FDF4-D0D7-1292BAEB974A}") = "Skull_Island", "Assembly-CSharp.csproj", "{5F3AB1A8-B7EC-8596-548E-90751767B0BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
