@@ -4,7 +4,7 @@ using System.Collections;
 public class MouseShoot : MonoBehaviour {
 
 	public GameObject bullet;
-	public float speed = 5.0f;
+	public float speed = 6.0f;
 	public bool pause = true;
 	Animator anim;
 
