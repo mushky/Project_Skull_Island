@@ -24,16 +24,19 @@ public class MouseShoot : MonoBehaviour {
 			Quaternion rotation = Quaternion.Euler(0,0,Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90) ;
 			GameObject projectile = (GameObject) Instantiate(bullet,myPos, rotation);
 			projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
+
+			// Attack Animation
 			anim.Play("PlayerAttack");
-			StartCoroutine(Pause());
+			StartCoroutine(AnimationPause());
 			anim.Play("PlayerIdle");
-			StartCoroutine(Pause());
+			StartCoroutine(AnimationPause());
 
 
 		}
 	}
 
-	public IEnumerator Pause()
+	// Cheap Animation Change Fix
+	public IEnumerator AnimationPause()
 	{
 		pause = false;
 		yield return new WaitForSeconds(0.5f);
