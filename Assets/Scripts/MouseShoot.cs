@@ -27,6 +27,8 @@ public class MouseShoot : MonoBehaviour {
 			anim.Play("PlayerAttack");
 			StartCoroutine(Pause());
 			anim.Play("PlayerIdle");
+			StartCoroutine(Pause());
+
 
 		}
 	}

@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour {
 	}
 
 
-	void Update () 
+	void FixedUpdate () 
 	{
 		playerCamera.orthographicSize = (Screen.height / 100f) / screenScalar;
 
