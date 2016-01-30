@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
+// And Shooting and shit
 
 	public float speed = 5.0f;
 	public int hitPoints = 70;
+
 	public GameObject shot;
 	public Transform shotSpawn;
+
 	public float fireRate = 1f;
 	public float delay = 1f;
 
@@ -14,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 	}
+
 	void Update() 
 	{
 		if (Input.GetKey("w"))
@@ -40,6 +44,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			Fire();
 		}
+
 	}		
 }
 	
