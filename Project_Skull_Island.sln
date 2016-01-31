@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
@@ -24,3 +25,28 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2BFA30A6-4CF8-A40A-E28B-84A1B79482B8}") = "project_skull_island", "Assembly-CSharp.csproj", "{E2AF8465-971D-BA76-B2C2-6086C21D92DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
+>>>>>>> 08ba1649481dc1d901eb5592073ccfcdb86f1b42
