@@ -13,7 +13,6 @@ public class EnemyScript : MonoBehaviour {
 	{
 		Debug.Log(Range);
 	}
-	public Transform Player;
 
 	void OnTriggerEnter2D(Collider2D collide)
 	{
@@ -22,11 +21,7 @@ public class EnemyScript : MonoBehaviour {
 			hitPoints -= 10;
 			Debug.Log("Enemy Hit by Player Bullet");
 		}
-		if (collide.gameObject.tag == "Player") 
-		{
-			transform.LookAt(Player);
-			transform.position += Vector3.up * Time.deltaTime * speed;
-		}
+
 				
 	}
 		
