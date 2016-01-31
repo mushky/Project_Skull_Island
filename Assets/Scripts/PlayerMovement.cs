@@ -20,13 +20,4 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter2D(Collider2D collide)
-	{
-		if (collide.gameObject.tag == "Enemy")
-		{
-			playerHealth.hitPoints--;
-			Debug.Log("HIT!");
-
-		}
-	}
 }
