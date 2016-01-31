@@ -33,7 +33,7 @@ public class EnemyScript : MonoBehaviour {
 		if (collide.gameObject.tag == "Net" && hitPoints <= 10) 
 		{
 			Debug.Log ("Captured!");
-			playerScore.score++;
+			playerScore.score+=5;
 			Captured.Play();
 			transform.position = new Vector2(5000,5000);
 		}

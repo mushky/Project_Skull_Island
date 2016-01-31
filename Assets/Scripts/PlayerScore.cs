@@ -8,5 +8,13 @@ public class PlayerScore : MonoBehaviour {
 	{
 		GUI.Box(new Rect(10, 34, 68, 24), "Score: " + score.ToString());
 	}
+
+	void Update()
+	{
+		if (score>=40)
+		{
+			Application.LoadLevel("YouWin");
+		}
+	}
 		
 }

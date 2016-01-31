@@ -50,9 +50,12 @@
      <Compile Include="Assets\Scripts\DestroyBullet.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
+     <Compile Include="Assets\Scripts\IntroGUI.cs" />
      <Compile Include="Assets\Scripts\MouseShoot.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScore.cs" />
+     <Compile Include="Assets\Scripts\YouLose.cs" />
+     <Compile Include="Assets\Scripts\YouWin.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />

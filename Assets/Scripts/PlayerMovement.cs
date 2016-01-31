@@ -24,8 +24,9 @@ public class PlayerMovement : MonoBehaviour {
 		rigidbody.MovePosition(rigidbody.position + movementVector * speed * Time.deltaTime);
 
 		if (hitPoints <= 0) {
-			Destroy (this.gameObject);
 			Debug.Log ("Dead");
+			Application.LoadLevel("YouLose");
+
 		}
 	}
 
