@@ -6,12 +6,20 @@ public class EnemyScript : MonoBehaviour {
 	public float speed = 3f;
 	public Transform player;
 
+	public int score = 0;
+
 	private float Distance = 2f;
 	private float Range;
 
 	void Start()
 	{
 		Debug.Log(Range);
+	}
+
+
+	void OnGUI ()
+	{
+		GUI.Box(new Rect(10, 34, 68, 24), "Score: " + score);
 	}
 
 	void OnTriggerEnter2D(Collider2D collide)
@@ -22,6 +30,11 @@ public class EnemyScript : MonoBehaviour {
 			Debug.Log("Enemy Hit by Player Bullet");
 		}
 
+		if (collide.gameObject.tag == "Net" && hitPoints <= 10) {
+			score++;
+			Destroy (this.gameObject);
+			Debug.Log ("Captured!");
+		}
 				
 	}
 		
