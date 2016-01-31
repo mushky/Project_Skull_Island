@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 		rigidbody.MovePosition(rigidbody.position + movementVector * speed * Time.deltaTime);
+
+		if (hitPoints <= 0) {
+			Destroy (this.gameObject);
+			Debug.Log ("Dead");
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collide)
