@@ -4,14 +4,11 @@ using System.Collections;
 public class MouseShoot : MonoBehaviour {
 
 	public GameObject bullet;
-<<<<<<< HEAD
 	public float speed = 5.0f;
 	public GameObject net;
-=======
-	public float speed = 6.0f;
+	public float oldspeed = 6.0f;
 	public bool pause = true;
 	Animator anim;
->>>>>>> 80b21f8cecb9068f1bf56178a131d8c8e67ba8bb
 
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -30,7 +27,6 @@ public class MouseShoot : MonoBehaviour {
 			GameObject projectile = (GameObject) Instantiate(bullet,myPos, rotation);
 			projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
 
-<<<<<<< HEAD
 		}
 
 		if (Input.GetMouseButtonDown(1)) {
@@ -42,7 +38,6 @@ public class MouseShoot : MonoBehaviour {
 			GameObject projectile = (GameObject) Instantiate(net, myPos, rotation);
 			projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
 
-=======
 			// Attack Animation
 			anim.Play("PlayerAttack");
 			StartCoroutine(AnimationPause());
@@ -51,7 +46,6 @@ public class MouseShoot : MonoBehaviour {
 
 		}
 	}
->>>>>>> 80b21f8cecb9068f1bf56178a131d8c8e67ba8bb
 
 	// Cheap Animation Change Fix
 	public IEnumerator AnimationPause()
