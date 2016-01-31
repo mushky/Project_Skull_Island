@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{8E784C4C-72DC-FDF4-D0D7-1292BAEB974A}") = "Skull_Island", "Assembly-CSharp.csproj", "{5F3AB1A8-B7EC-8596-548E-90751767B0BC}"
 EndProject
+Project("{8E784C4C-72DC-FDF4-D0D7-1292BAEB974A}") = "Skull_Island", "Assembly-CSharp-Editor.csproj", "{38EA7C16-1F3E-1F04-DCE6-CBBC26428C5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3AB1A8-B7EC-8596-548E-90751767B0BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EA7C16-1F3E-1F04-DCE6-CBBC26428C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EA7C16-1F3E-1F04-DCE6-CBBC26428C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EA7C16-1F3E-1F04-DCE6-CBBC26428C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EA7C16-1F3E-1F04-DCE6-CBBC26428C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
