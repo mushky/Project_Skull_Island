@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Skull_Island.CSharp", "Project_Skull_Island.CSharp.csproj", "{5A48163A-0A99-D41D-FF87-3A54C364C344}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2BFA30A6-4CF8-A40A-E28B-84A1B79482B8}") = "project_skull_island", "Assembly-CSharp.csproj", "{E2AF8465-971D-BA76-B2C2-6086C21D92DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AF8465-971D-BA76-B2C2-6086C21D92DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
