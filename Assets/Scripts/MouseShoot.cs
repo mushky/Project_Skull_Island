@@ -31,7 +31,6 @@ public class MouseShoot : MonoBehaviour {
 			anim.Play("PlayerIdle");
 			StartCoroutine(AnimationPause());
 
-
 		}
 	}
 
