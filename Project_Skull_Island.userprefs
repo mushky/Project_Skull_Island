@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="Project_Skull_Island.CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
 <<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
@@ -8,8 +8,12 @@
 =======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MouseShoot.cs">
     <Files>
+<<<<<<< HEAD
+      <File FileName="Assets\Scripts\MouseShoot.cs" Line="10" Column="27" />
+=======
       <File FileName="Assets\Scripts\MouseShoot.cs" Line="41" Column="1" />
 >>>>>>> c37fd7eabec31e0e986f65fd76691693533a6a03
+>>>>>>> 35787bf6171f4aeff52965ed8e1a524cfd695aa6
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
