@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyScript : MonoBehaviour {
 	public int hitPoints = 30;
 	public float speed = 3f;
+<<<<<<< HEAD
 	public Transform player;
 
 	private float Distance = 2f;
@@ -13,6 +14,9 @@ public class EnemyScript : MonoBehaviour {
 	{
 		Debug.Log(Range);
 	}
+=======
+	public Transform Player;
+>>>>>>> 2d9c66372ab5f334822f6fb2ee1461794c9dc59c
 
 	void OnTriggerEnter2D(Collider2D collide)
 	{
@@ -21,6 +25,12 @@ public class EnemyScript : MonoBehaviour {
 			hitPoints -= 10;
 			Debug.Log("Enemy Hit by Player Bullet");
 		}
+		if (collide.gameObject.tag == "Player") 
+		{
+			transform.LookAt(Player);
+			transform.position += Vector3.up * Time.deltaTime * speed;
+		}
+				
 	}
 		
 	void Update () {

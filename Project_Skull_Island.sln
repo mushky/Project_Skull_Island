@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Skull_Island.CSharp", "Project_Skull_Island.CSharp.csproj", "{5A48163A-0A99-D41D-FF87-3A54C364C344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Skull_Island.CSharp.Editor", "Project_Skull_Island.CSharp.Editor.csproj", "{7101F21B-0D87-2344-F9C9-5078B9FF3800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A48163A-0A99-D41D-FF87-3A54C364C344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7101F21B-0D87-2344-F9C9-5078B9FF3800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7101F21B-0D87-2344-F9C9-5078B9FF3800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7101F21B-0D87-2344-F9C9-5078B9FF3800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7101F21B-0D87-2344-F9C9-5078B9FF3800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+=======
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
@@ -21,3 +49,4 @@ Global
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
+>>>>>>> 08ba1649481dc1d901eb5592073ccfcdb86f1b42
