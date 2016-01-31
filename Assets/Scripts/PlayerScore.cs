@@ -6,7 +6,7 @@ public class PlayerScore : MonoBehaviour {
 		
 	void OnGUI ()
 	{
-		GUI.Box(new Rect(10, 34, 68, 24), "Score: " + score);
+		GUI.Box(new Rect(10, 34, 68, 24), "Score: " + score.ToString());
 	}
 		
 }

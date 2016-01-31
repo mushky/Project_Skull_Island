@@ -11,7 +11,7 @@ public class EnemyMove : MonoBehaviour {
     Vector2 _originalPosition;
     bool isGoingLeft = false;
     public float distFromStart;
-
+	public EnemyScript enemyScript;
 	// Use this for initialization
 	public void Start () {
 
@@ -24,7 +24,7 @@ public class EnemyMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        distFromStart = transform.position.x - _originalPosition.x;
+		distFromStart = transform.position.x - _originalPosition.x;
 
         if (isGoingLeft)
         {
@@ -40,6 +40,12 @@ public class EnemyMove : MonoBehaviour {
 
             _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
         }
+
+		if (enemyScript.hitPoints <= 10)
+		{
+			speed = 0;
+
+		}
 	}
 
     void SwitchDirection()

@@ -4,50 +4,55 @@ using System.Collections;
 public class EnemyScript : MonoBehaviour {
 	public int hitPoints = 30;
 	public float speed = 3f;
+
+	public float Distance = 2f;
+	public float Range;
+
 	public Transform player;
+	public AudioSource Captured;
 
-	public int score = 0;
-
-	private float Distance = 2f;
-	private float Range;
+	public PlayerScore playerScore;
+	Animator anim;
 
 	void Start()
 	{
 		Debug.Log(Range);
+		anim = GetComponent<Animator>();
+		Captured = GetComponent<AudioSource>();
 	}
-
-
-	void OnGUI ()
-	{
-		GUI.Box(new Rect(10, 34, 68, 24), "Score: " + score);
-	}
-
+		
 	void OnTriggerEnter2D(Collider2D collide)
 	{
 		if (collide.gameObject.tag == "PlayerBullet")
 		{
 			hitPoints -= 10;
 			Debug.Log("Enemy Hit by Player Bullet");
+			Captured.Play();
 		}
 
-		if (collide.gameObject.tag == "Net" && hitPoints <= 10) {
-			score++;
-			Destroy (this.gameObject);
+		if (collide.gameObject.tag == "Net" && hitPoints <= 10) 
+		{
 			Debug.Log ("Captured!");
+			playerScore.score++;
+			Captured.Play();
+			transform.position = new Vector2(5000,5000);
 		}
-				
 	}
 		
-	void Update () {
-		if (hitPoints >= 0 && hitPoints <= 10) {
-			speed = 0f;
-			// anim = GetComponent<Animator> ();
+	void Update () 
+	{
+		if (hitPoints <= 10) 
+		{
+			anim.Play("EnemyStunned");
 			Debug.Log ("Enemy is stunned");
 		}
 
-		if (hitPoints <= 0) {
+		if (hitPoints <= 0) 
+		{
+			Captured.Play();
 			Destroy (this.gameObject);
 			Debug.Log ("Dead");
+
 		}
 
 		Range = Vector2.Distance(transform.position, player.position);
@@ -57,6 +62,5 @@ public class EnemyScript : MonoBehaviour {
 			Debug.Log(Range);
 			transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);		
 		}
-
 	}
 }
