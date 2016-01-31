@@ -16,5 +16,4 @@ public class PlayerScore : MonoBehaviour {
 			Application.LoadLevel("YouWin");
 		}
 	}
-		
 }
