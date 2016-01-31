@@ -5,9 +5,14 @@ public class PlayerMovement : MonoBehaviour {
     // And Shooting and shit
 	Rigidbody2D rigidbody;
 	Animator anim;
-	public float speed = 2.0f;
-	PlayerHealth playerHealth;
 
+	public float speed = 2.0f;
+	public int hitPoints = 70;
+
+	void OnGUI()
+	{
+		GUI.Box(new Rect(10, 10, 68, 24), "HP: " + hitPoints.ToString());
+	}
 
 	void Start () {
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -19,5 +24,13 @@ public class PlayerMovement : MonoBehaviour {
 		rigidbody.MovePosition(rigidbody.position + movementVector * speed * Time.deltaTime);
 	}
 
+	void OnTriggerEnter2D(Collider2D collide)
+	{
+		if (collide.gameObject.tag == "Enemy")
+		{
+			hitPoints -= 10;
+			Debug.Log("You have been hit by the enemy");
+		}
+	}
 
 }
