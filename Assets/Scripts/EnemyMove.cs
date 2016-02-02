@@ -5,40 +5,40 @@ using System;
 public class EnemyMove : MonoBehaviour {
 
     protected Vector2 velocity;
-    public Transform _transform;
+    public Transform ObjectPosition;
     public float distance = 3f;
     public float speed = 1f;
-    Vector2 _originalPosition;
-    bool isGoingLeft = false;
+    Vector2 OriginalPosition;
+    bool IsGoingLeft = false;
     public float distFromStart;
 	public EnemyScript enemyScript;
-	// Use this for initialization
-	public void Start () {
 
-        _originalPosition = gameObject.transform.position;
-        _transform = GetComponent<Transform>();
+	public void Start() 
+	{
+        OriginalPosition = gameObject.transform.position;
+		ObjectPosition = GetComponent<Transform>();
         velocity = new Vector2(speed, 0);
-        _transform.Translate(velocity.x * Time.deltaTime, 0,0);
+		ObjectPosition.Translate(velocity.x * Time.deltaTime, 0,0);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update() 
+	{
 
-		distFromStart = transform.position.x - _originalPosition.x;
+		distFromStart = transform.position.x - OriginalPosition.x;
 
-        if (isGoingLeft)
+        if (IsGoingLeft)
         {
             if (distFromStart < -distance)
                 SwitchDirection();
 
-            _transform.Translate(-velocity.x * Time.deltaTime, 0, 0);
+			ObjectPosition.Translate(-velocity.x * Time.deltaTime, 0, 0);
         }
         else
         {
             if (distFromStart > distance)
                 SwitchDirection();
 
-            _transform.Translate(velocity.x * Time.deltaTime, 0, 0);
+			ObjectPosition.Translate(velocity.x * Time.deltaTime, 0, 0);
         }
 
 		if (enemyScript.hitPoints <= 10)
@@ -50,6 +50,6 @@ public class EnemyMove : MonoBehaviour {
 
     void SwitchDirection()
     {
-        isGoingLeft = !isGoingLeft;
+        IsGoingLeft = !IsGoingLeft;
     }
 }
