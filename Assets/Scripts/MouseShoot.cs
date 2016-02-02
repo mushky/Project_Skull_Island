@@ -6,9 +6,8 @@ public class MouseShoot : MonoBehaviour
 	public GameObject bullet;
 	public GameObject net;
 
-	public float speed = 5.0f;
-	public float oldspeed = 6.0f;
-	public bool pause = true;
+	public float speed    = 5.0f;
+	public bool  pause    = true;
 
 	Animator anim;
 
@@ -37,7 +36,7 @@ public class MouseShoot : MonoBehaviour
 		Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
 		Vector2 myPos = new Vector2(transform.position.x,transform.position.y);
 		Vector2 direction = target - myPos;
-		direction.Normalize();
+		direction.Normalize(); // Normalize ensures the Vector has a Magnitude of 1.
 		Quaternion rotation = Quaternion.Euler(0,0,Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90);
 		GameObject projectile = (GameObject) Instantiate(weapon,myPos,rotation);
 		projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
@@ -45,14 +44,13 @@ public class MouseShoot : MonoBehaviour
 
 	void AnimatePlayer()
 	{
-		// Attack Animation
 		anim.Play("PlayerAttack");
 		StartCoroutine(AnimationPause());
 		anim.Play("PlayerIdle");
 		StartCoroutine(AnimationPause());
 	}
 
-	// Cheap Animation Change Fix
+	// Cheap Animation Change Fix that should be corrected in the Animator Controller.
 	public IEnumerator AnimationPause()
 	{
 		pause = false;
