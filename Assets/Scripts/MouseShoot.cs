@@ -12,12 +12,13 @@ public class MouseShoot : MonoBehaviour
 
 	Animator anim;
 
-	void Start () 
+	void Start() 
 	{
 		anim = GetComponent<Animator>();
 	}
 
-	void Update () {
+	void Update() 
+	{
 		if (Input.GetMouseButtonDown(0)) 
 		{
 			MouseFire(bullet);
@@ -31,14 +32,14 @@ public class MouseShoot : MonoBehaviour
 		}
 	}
 
-	void MouseFire(string weapon)
+	void MouseFire(GameObject weapon)
 	{
 		Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
 		Vector2 myPos = new Vector2(transform.position.x,transform.position.y);
 		Vector2 direction = target - myPos;
 		direction.Normalize();
 		Quaternion rotation = Quaternion.Euler(0,0,Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90);
-		GameObject projectile = (GameObject) Instantiate(weapon,myPos, rotation);
+		GameObject projectile = (GameObject) Instantiate(weapon,myPos,rotation);
 		projectile.GetComponent<Rigidbody2D>().velocity = direction * speed;
 	}
 
